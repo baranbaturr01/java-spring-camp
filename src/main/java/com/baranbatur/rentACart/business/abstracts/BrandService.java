@@ -1,10 +1,12 @@
 package com.baranbatur.rentACart.business.abstracts;
 
-import com.baranbatur.rentACart.entities.concretes.Brand;
-import org.springframework.context.annotation.Bean;
+import com.baranbatur.rentACart.business.requests.CreateBrandRequest;
+import com.baranbatur.rentACart.business.responses.GetAllBrandsResponse;
 
 import java.util.List;
 
 public interface BrandService {
-    List<Brand> getALl();
+    List<GetAllBrandsResponse> getALl();
+
+    void add(CreateBrandRequest createBrandRequest);
 }
